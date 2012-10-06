@@ -1,2 +1,14 @@
 spec/dummy/
 pkg/
+\#*
+*~
+.#*
+.DS_Store
+.idea
+.project
+tmp
+nbproject
+*.swp
+spec/dummy
+*.sublime-workspace
+*.sublime-project
