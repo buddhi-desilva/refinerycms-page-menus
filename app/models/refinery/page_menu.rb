@@ -26,8 +26,9 @@ module Refinery
     # end
 
     def roots
-      @roots ||= positions.select {|pos| pos.parent_id.nil?}
-    end    
+      roots_positions ||= positions.select {|pos| pos.parent_id.nil?}
+      @roots = ::Refinery::Menu.new(roots_positions.collect {|pos| Refinery::Page.find_by_id(pos.refinery_page_id)})
+    end
       
   end
 end
